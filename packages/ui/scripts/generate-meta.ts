@@ -47,7 +47,7 @@ const componentMeta = {
       },
       slots: ["trigger", "default"],
       events: [],
-      a11y: ["aria-label(close)", "focus-trap-via-radix"],
+      a11y: ["aria-label(close)", "focus-trap-via-radix", "layered-overlay-z-index"],
       tokens: ["background", "foreground", "border"]
     },
     {

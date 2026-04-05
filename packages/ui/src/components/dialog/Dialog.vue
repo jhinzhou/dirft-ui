@@ -37,8 +37,11 @@ const dialogClass = computed(() =>
       <slot name="trigger" />
     </DialogTrigger>
     <DialogPortal>
-      <DialogOverlay class="fixed inset-0 bg-black/30" />
-      <DialogContent :class="dialogClass">
+      <DialogOverlay class="fixed inset-0 z-40 bg-black/30" />
+      <DialogContent
+        class="z-50"
+        :class="dialogClass"
+      >
         <div class="mb-4 flex items-center justify-between">
           <DialogTitle class="text-base font-semibold">
             {{ title }}

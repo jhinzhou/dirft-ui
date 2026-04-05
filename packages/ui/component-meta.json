@@ -72,7 +72,8 @@
       "events": [],
       "a11y": [
         "aria-label(close)",
-        "focus-trap-via-radix"
+        "focus-trap-via-radix",
+        "layered-overlay-z-index"
       ],
       "tokens": [
         "background",

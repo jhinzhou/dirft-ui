@@ -28,6 +28,24 @@ jobs:
       - run: pnpm build
       - run: pnpm harness
       - run: pnpm meta:check
-      - run: pnpm --filter drift-design publish --access public
+      - name: Publish npm packages
+        run: |
+          publish_if_needed() {
+            package_name="$1"
+            package_filter="$2"
+            package_json_path="$3"
+
+            local_version=$(PACKAGE_JSON_PATH="$package_json_path" node -e "const fs=require('fs'); const p=process.env.PACKAGE_JSON_PATH; console.log(JSON.parse(fs.readFileSync(p, 'utf8')).version)")
+
+            if npm view "${package_name}@${local_version}" version >/dev/null 2>&1; then
+              echo "Skip ${package_name}@${local_version}: already published."
+            else
+              echo "Publishing ${package_name}@${local_version}..."
+              pnpm --filter "$package_filter" publish --access public
+            fi
+          }
+
+          publish_if_needed "drift-design" "./packages/ui" "packages/ui/package.json"
+          publish_if_needed "create-drift-design" "./packages/create-drift-design" "packages/create-drift-design/package.json"
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
