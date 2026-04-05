@@ -2,6 +2,7 @@
   "extends": "../../tsconfig.base.json",
   "compilerOptions": {
     "composite": true,
+    "tsBuildInfoFile": "../../node_modules/.cache/tsbuildinfo/docs.tsbuildinfo",
     "types": ["node"]
   },
   "include": [".vitepress/**/*.ts", "types/**/*.d.ts"]
