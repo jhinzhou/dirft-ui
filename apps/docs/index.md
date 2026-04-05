@@ -2,7 +2,7 @@
 layout: home
 
 hero:
-  name: drift-ui
+  name: drift-design
   text: AI-ready Vue Component Library
   tagline: 为 Vue + TS + Vite 打造的可交互组件库，内置 i18n、主题切换、Harness 验收与 AI 元数据。
   actions:

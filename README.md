@@ -1,6 +1,6 @@
-# drift-ui
+# drift-design
 
-`drift-ui` 是一个基于 Vue + TypeScript + Vite 的组件库 Monorepo，目标是同时面向开发者与 AI 代理友好。
+`drift-design` 是一个基于 Vue + TypeScript + Vite 的组件库 Monorepo，目标是同时面向开发者与 AI 代理友好。
 
 ## Workspace
 

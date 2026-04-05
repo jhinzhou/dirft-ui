@@ -15,7 +15,7 @@ function normalizeBase(base: string | undefined): string {
 
 export default defineConfig({
   base: normalizeBase(process.env.VITEPRESS_BASE),
-  title: "drift-ui",
+  title: "drift-design",
   description: "AI-ready Vue component library",
   vite: {
     resolve: {

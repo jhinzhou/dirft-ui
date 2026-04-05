@@ -15,7 +15,7 @@ const gates = [
   { name: "Type Gate", command: "pnpm typecheck" },
   { name: "Behavior Gate", command: "pnpm test" },
   { name: "A11y Gate", command: "pnpm test -- harness/specs/a11y.spec.ts" },
-  { name: "Doc Gate", command: "pnpm --filter @drift-ui/docs run build" },
+  { name: "Doc Gate", command: "pnpm --filter @drift-design/docs run build" },
   { name: "Meta Gate", command: "pnpm meta:check" },
   { name: "I18n Gate", command: "pnpm i18n:check" },
   { name: "Theme Gate", command: "pnpm theme:check" }

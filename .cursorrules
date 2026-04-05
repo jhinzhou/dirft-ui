@@ -1,4 +1,4 @@
-## drift-ui Agent Rules
+## drift-design Agent Rules
 
 1. Always prefer minimal changes and avoid cross-step scope.
 2. Use semantic theme tokens (`primary`, `success`, `warning`, `destructive`), never hardcode brand colors in components.

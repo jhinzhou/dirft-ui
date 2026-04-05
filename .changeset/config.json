@@ -7,5 +7,5 @@
   "access": "public",
   "baseBranch": "main",
   "updateInternalDependencies": "patch",
-  "ignore": ["@drift-ui/docs"]
+  "ignore": ["@drift-design/docs"]
 }

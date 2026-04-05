@@ -10,7 +10,7 @@
 
 ### Major Changes
 
-- first stable release for drift-ui with ai-ready metadata, i18n, theme tokens, and harness gates.
+- first stable release for drift-design with ai-ready metadata, i18n, theme tokens, and harness gates.
 
 ### Patch Changes
 

@@ -1,4 +1,4 @@
-# drift-ui 发布与版本管理手册
+# drift-design 发布与版本管理手册
 
 本文档用于规范 `drift-design` 的后续版本发布流程。默认采用 `Changesets + GitHub Actions + npm` 自动发布链路。
 

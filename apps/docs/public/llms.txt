@@ -1,4 +1,4 @@
-# drift-ui LLM Index
+# drift-design LLM Index
 
 ## Package
 - name: drift-design
