@@ -8,7 +8,7 @@
   - `major`：破坏性变更（API 不兼容、行为语义变化）
   - `minor`：向后兼容的新能力
   - `patch`：向后兼容的缺陷修复/小改进
-- 默认发布包：`drift-design`
+- 默认发布包：`drift-design`、`create-drift-design`
 - `apps/docs` 不发布到 npm（已在 changeset 配置中忽略）
 
 ## 2. 发布前门禁（必须全部通过）
@@ -40,7 +40,7 @@ pnpm changeset
 
 交互选择建议：
 
-- package: `drift-design`
+- package: 按本次变更选择 `drift-design` 或 `create-drift-design`
 - bump 类型：`patch | minor | major`
 - summary：聚焦“为什么发布”，避免仅写“改了什么”
 
@@ -50,10 +50,10 @@ pnpm changeset
 pnpm version-packages
 ```
 
-会更新：
+会更新（按选择的包）：
 
-- `packages/ui/package.json` 版本号
-- `packages/ui/CHANGELOG.md`
+- `packages/ui/package.json` 或 `packages/create-drift-design/package.json` 版本号
+- 对应包的 `CHANGELOG.md`
 - 删除已消费的 `.changeset/*.md`
 
 ### Step 3：提交并推送

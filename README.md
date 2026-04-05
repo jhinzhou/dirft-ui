@@ -5,6 +5,7 @@
 ## Workspace
 
 - `packages/ui`: 组件库源码、测试、harness、元数据生成
+- `packages/create-drift-design`: 消费端项目脚手架 CLI
 - `apps/docs`: VitePress 文档站
 
 ## 常用命令
@@ -21,6 +22,12 @@
 ## 发布文档
 
 - 版本发布与回滚规范：`docs/release-process.md`
+
+## CLI 脚手架
+
+- `pnpm create drift-design`：创建消费端项目（交互式）
+- `pnpm create drift-design my-app --yes --no-install`：非交互创建
+- `pnpm create drift-design my-app --yes --pm pnpm --install`：创建并安装依赖
 
 ## 文档站
 
