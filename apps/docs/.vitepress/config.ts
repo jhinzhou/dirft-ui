@@ -1,5 +1,9 @@
 import { defineConfig } from "vitepress";
 import markdownItContainer from "markdown-it-container";
+import { dirname, resolve } from "node:path";
+import { fileURLToPath } from "node:url";
+
+const currentDir = dirname(fileURLToPath(import.meta.url));
 
 function normalizeBase(base: string | undefined): string {
   if (!base || base === "/") {
@@ -13,6 +17,13 @@ export default defineConfig({
   base: normalizeBase(process.env.VITEPRESS_BASE),
   title: "drift-ui",
   description: "AI-ready Vue component library",
+  vite: {
+    resolve: {
+      alias: {
+        "@": resolve(currentDir, "../../../packages/ui/src")
+      }
+    }
+  },
   themeConfig: {
     nav: [
       { text: "Guide", link: "/guide/getting-started" },

@@ -1,8 +1,14 @@
 # Dialog
 
+## 交互演示
+
+<DialogInteractiveDemo />
+
+## Usage
+
 ```vue
 <script setup lang="ts">
-import { Button, Dialog } from "@drift-ui/ui";
+import { Button, Dialog } from "@drift/ui";
 </script>
 
 <template>

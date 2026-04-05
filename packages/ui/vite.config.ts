@@ -21,7 +21,8 @@ export default defineConfig({
       entry: resolve(currentDir, "src/index.ts"),
       name: "DriftUI",
       formats: ["es", "cjs"],
-      fileName: (format) => (format === "es" ? "index.js" : "index.cjs")
+      fileName: (format) => (format === "es" ? "index.js" : "index.cjs"),
+      cssFileName: "styles"
     },
     rollupOptions: {
       external: ["vue"]

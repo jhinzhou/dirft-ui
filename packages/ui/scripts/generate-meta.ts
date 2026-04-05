@@ -9,7 +9,7 @@ const packageJson = JSON.parse(readFileSync(resolve(currentDir, "../package.json
 const packageVersion = packageJson.version ?? "0.0.0";
 
 const componentMeta = {
-  package: "@drift-ui/ui",
+  package: "@drift/ui",
   generatedAt: `version:${packageVersion}`,
   components: [
     {

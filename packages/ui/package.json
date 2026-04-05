@@ -1,5 +1,5 @@
 {
-  "name": "@drift-ui/ui",
+  "name": "@drift/ui",
   "version": "1.0.1",
   "type": "module",
   "publishConfig": {

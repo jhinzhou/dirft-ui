@@ -1,6 +1,6 @@
 # drift-ui 发布与版本管理手册
 
-本文档用于规范 `@drift-ui/ui` 的后续版本发布流程。默认采用 `Changesets + GitHub Actions + npm` 自动发布链路。
+本文档用于规范 `@drift/ui` 的后续版本发布流程。默认采用 `Changesets + GitHub Actions + npm` 自动发布链路。
 
 ## 1. 版本策略
 
@@ -8,7 +8,7 @@
   - `major`：破坏性变更（API 不兼容、行为语义变化）
   - `minor`：向后兼容的新能力
   - `patch`：向后兼容的缺陷修复/小改进
-- 默认发布包：`@drift-ui/ui`
+- 默认发布包：`@drift/ui`
 - `apps/docs` 不发布到 npm（已在 changeset 配置中忽略）
 
 ## 2. 发布前门禁（必须全部通过）
@@ -40,7 +40,7 @@ pnpm changeset
 
 交互选择建议：
 
-- package: `@drift-ui/ui`
+- package: `@drift/ui`
 - bump 类型：`patch | minor | major`
 - summary：聚焦“为什么发布”，避免仅写“改了什么”
 
@@ -71,7 +71,7 @@ git push
 如果是首次发布：
 
 1. 至少准备 1 个 `major` changeset
-2. 确认 npm 包名可用：`npm view @drift-ui/ui`
+2. 确认 npm 包名可用：`npm view @drift/ui`
 3. 确认仓库已配置 `NPM_TOKEN` secret
 4. 推送 `main` 后观察 `Release` workflow 日志
 
@@ -130,7 +130,7 @@ git push
 3. 必要时执行 deprecate：
 
 ```bash
-npm deprecate @drift-ui/ui@X.Y.Z "This version has critical issues, please upgrade."
+npm deprecate @drift/ui@X.Y.Z "This version has critical issues, please upgrade."
 ```
 
 ## 8. 提交与发布规范

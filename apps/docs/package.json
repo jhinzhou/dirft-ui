@@ -4,7 +4,9 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "predev": "pnpm --filter @drift/ui run build",
     "dev": "vitepress dev .",
+    "prebuild": "pnpm --filter @drift/ui run build",
     "build": "vitepress build .",
     "preview": "vitepress preview .",
     "lint": "eslint .vitepress --max-warnings=0",

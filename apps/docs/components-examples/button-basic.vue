@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Button } from "@drift-ui/ui";
+import { Button } from "../../../packages/ui/src";
 </script>
 
 <template>

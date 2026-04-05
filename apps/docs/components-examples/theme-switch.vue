@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Button, createThemeProvider, provideTheme } from "@drift-ui/ui";
+import { Button, createThemeProvider, provideTheme } from "../../../packages/ui/src";
 
 const theme = createThemeProvider("light");
 provideTheme(theme);

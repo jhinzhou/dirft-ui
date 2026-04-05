@@ -1,4 +1,4 @@
-# @drift-ui/ui
+# @drift/ui
 
 ## 1.0.1
 

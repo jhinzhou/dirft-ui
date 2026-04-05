@@ -1,9 +1,9 @@
 # drift-ui LLM Index
 
 ## Package
-- name: @drift-ui/ui
-- import: @drift-ui/ui
-- style: @drift-ui/ui/styles.css
+- name: @drift/ui
+- import: @drift/ui
+- style: @drift/ui/styles.css
 
 ## Components
 - Button: /components/button
