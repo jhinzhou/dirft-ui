@@ -1,6 +1,6 @@
 {
   "package": "@drift-ui/ui",
-  "generatedAt": "2026-04-05T05:15:17.265Z",
+  "generatedAt": "version:1.0.1",
   "components": [
     {
       "name": "Button",

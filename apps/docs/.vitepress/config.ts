@@ -1,7 +1,16 @@
 import { defineConfig } from "vitepress";
 import markdownItContainer from "markdown-it-container";
 
+function normalizeBase(base: string | undefined): string {
+  if (!base || base === "/") {
+    return "/";
+  }
+  const withLeading = base.startsWith("/") ? base : `/${base}`;
+  return withLeading.endsWith("/") ? withLeading : `${withLeading}/`;
+}
+
 export default defineConfig({
+  base: normalizeBase(process.env.VITEPRESS_BASE),
   title: "drift-ui",
   description: "AI-ready Vue component library",
   themeConfig: {

@@ -1,10 +1,16 @@
-import { writeFileSync } from "node:fs";
+import { readFileSync, writeFileSync } from "node:fs";
 import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 
+const currentDir = dirname(fileURLToPath(import.meta.url));
+const packageJson = JSON.parse(readFileSync(resolve(currentDir, "../package.json"), "utf8")) as {
+  version?: string;
+};
+const packageVersion = packageJson.version ?? "0.0.0";
+
 const componentMeta = {
   package: "@drift-ui/ui",
-  generatedAt: new Date().toISOString(),
+  generatedAt: `version:${packageVersion}`,
   components: [
     {
       name: "Button",
@@ -82,8 +88,6 @@ const vscodeCustomData = {
     }))
   }))
 };
-
-const currentDir = dirname(fileURLToPath(import.meta.url));
 
 writeFileSync(resolve(currentDir, "../component-meta.json"), `${JSON.stringify(componentMeta, null, 2)}\n`, "utf8");
 writeFileSync(

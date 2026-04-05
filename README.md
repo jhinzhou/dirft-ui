@@ -14,7 +14,14 @@
 - `pnpm typecheck`: TS 类型检查
 - `pnpm build`: 构建组件库与文档
 - `pnpm harness`: 组件交付验收（7 类 Gate）
+- `pnpm docs:dev`: 本地启动 VitePress 文档站
+- `pnpm docs:build`: 构建文档静态产物
+- `pnpm docs:preview`: 预览文档构建结果
 
 ## 发布文档
 
 - 版本发布与回滚规范：`docs/release-process.md`
+
+## 文档站
+
+- GitHub Pages: `https://jhinzhou.github.io/dirft-ui/`
